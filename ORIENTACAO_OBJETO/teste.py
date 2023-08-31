@@ -1,0 +1,1 @@
+print(f'ORIENTACAO A OBJETO')
