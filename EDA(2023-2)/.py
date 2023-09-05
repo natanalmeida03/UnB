@@ -1,0 +1,1 @@
+print(f'ESTRUUTURA DE DADOS (2022/2)')
