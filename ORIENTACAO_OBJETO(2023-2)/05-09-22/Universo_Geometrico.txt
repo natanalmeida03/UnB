@@ -1,0 +1,57 @@
+classe Ponto:
+    variavel x, y
+
+    metodo cria_ponto(x, y):
+        this.x = x
+        this.y = y
+
+classe Linha:
+    variavel ponto1 = [x1, y1]
+    variavel ponto2 = [x2, y2]
+
+    metodo cria_linha(ponto1, ponto2):
+        this.ponto1 = ponto1
+        this.ponto2 = ponto2
+
+classe Circulo:
+    variavel centro = [x, y]
+    variavel raio
+
+    metodo cria_circulo(centro, raio):
+        this.centro = centro
+        this.raio = raio
+
+classe Retangulo:
+    variavel ponto = [x, y]
+    variavel altura, base
+
+    metodo cria_retangulo(ponto, altura, base):
+        this.ponto = ponto
+        this.altura = altura
+        this.base = base
+
+classe Triangulo:
+    atributo ponto1 = [x1, y1]
+    atributo ponto2 = [x2, y2]
+    atributo ponto3 = [x3, y3]
+
+    metodo cria_triangulo(ponto1, ponto2, ponto3):
+        this.ponto1 = ponto1
+        this.ponto2 = ponto2
+        this.ponto3 = ponto3
+
+||------------------------------------------------------------------------------||
+classe Principal:
+
+    Ponto.cria_ponto(2, 3)
+
+    Linha.cria_linha([3,4], [5,6])
+
+    Circulo.cria_circulo([7, 8], 2)
+
+    Retangulo.cria_retangulo([4, 3], 2, 4)
+
+    Triangulo.cria_triangulo([2, 4], [6, 5], [7, 2])
+
+
+
