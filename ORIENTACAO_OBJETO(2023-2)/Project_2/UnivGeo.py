@@ -1,4 +1,5 @@
 import math
+import time
 
 class Point():
     n = 1
@@ -118,4 +119,10 @@ def main():
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
+    end_time = time.time()
+
+    execution_time = end_time - start_time
+
+    print(f"\nTEMPO DE EXECUCAO: {execution_time:.4f} segundos")
