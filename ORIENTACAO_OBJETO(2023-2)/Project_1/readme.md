@@ -1,8 +1,8 @@
-##PROJETO 1
+**PROJETO 1**
 
 PROJETO 1 DE ORIENTACAO A OBJETO (UNIVERSO GEOMETRICO)
 
-###EXECUTAR:
+_EXECUTAR:_
 ```
 pip install matplotlib
 python ./UnivGeo.py
