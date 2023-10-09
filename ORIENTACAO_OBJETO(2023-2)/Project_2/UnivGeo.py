@@ -73,7 +73,7 @@ class Triangle():
 
     def print_coord (self):
         print(f'O TRIANGULO {self._name} ESTÁ LOCALIZADO EM: [({self.ponto1.x}, {self.ponto1.y}), ({self.ponto2.x}, {self.ponto2.y}), ({self.ponto3.x}, {self.ponto3.y})]')
-
+        
 def main():
     ponto1 = Point(4, 5)
     ponto2 = Point(6, 8)
@@ -120,7 +120,6 @@ def main():
     #triangulo2.print_perimeter()
     triangulo1.print_coord()
     #triangulo2.print_coord()
-
 
 if __name__ == "__main__":
     start_time = time.time()
