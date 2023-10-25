@@ -10,8 +10,8 @@ void insere_inicio(Node *lista, int x)
 {
     Node *nova = malloc (sizeof (Node));//aloca espaco de memoria para o novo elemento
     nova->valor = x;
-    nova->prox = lista->prox;
-    lista->prox = nova;
+    nova->prox = lista;
+    lista = nova;
    
 }
 

@@ -10,9 +10,9 @@ int remove_depois(celula *p) {
     if (p == NULL || p->prox == NULL) {
         return 0;
     }
-    celula *temp = p->prox;
-    p->prox = temp->prox;
-    free(temp);
+    celula *aux = p->prox;
+    p->prox = aux->prox;
+    free(aux);
     return 1;
 }
 

@@ -6,6 +6,7 @@ typedef struct celula {
     struct celula *prox;
 } celula;
 
+
 void imprime (celula *le)
 {
     celula *aux = le->prox;

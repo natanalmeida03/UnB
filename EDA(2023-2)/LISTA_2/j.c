@@ -2,33 +2,23 @@
 #include <string.h>
 
 int pa = 0, ua = 0, c = 0;
-int findsub(char *s, char *sub, int ps, int v)
+void findsub(char *s, char *sub, int ps, int v)
 {
-    if(!s[ps])
-        return;
+    if(!s[ps]) return;
 
     int tam = strlen(sub);
     char novastr[tam];
 
     strncpy(novastr, s + ps, tam);
 
-
     if(strcmp(sub, novastr) == 0)
     {
-        
-        if(v == 0)
-        {
-            pa = ps;
-            return (strlen(s) - ps) + findsub(s, sub, ps+1, 1);
-        }
+        if(v == 0) pa = ps;
+            
         ua = ps + strlen(sub);
-
         return findsub(s, sub, ps+1, 1);
-
     }
-
     return findsub(s, sub, ps+1, v);
-
 }
 int main ()
 {
@@ -40,8 +30,8 @@ int main ()
 
     scanf("%s", sub);
 
-    res = findsub(sg, sub, 0, 0);
+    findsub(sg, sub, 0, 0);
 
-    printf("%d\n", res);
+    printf("%d\n", ua - pa);
 
 }
