@@ -23,7 +23,9 @@ no *desempilhar (void) {
         return NULL;
     return pilha[--t];
 }
-
+//ESQUERDA
+//DIREITA
+//RAIZ
 void pos_ordem (no *raiz){
     
     pilha = malloc(sizeof(no *) * 15);

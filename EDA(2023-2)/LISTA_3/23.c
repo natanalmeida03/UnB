@@ -24,6 +24,9 @@ no *desempilhar (void) {
     return pilha[--t];
 }
 
+//ESQUERDA
+//RAIZ
+//DIREITA
 void em_ordem (no *raiz)
 {
     pilha = malloc(sizeof(no*) * 15);
