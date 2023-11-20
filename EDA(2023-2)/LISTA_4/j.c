@@ -38,18 +38,18 @@ void shell_sort(ll *v,ll n)
 
 int main (){
     ll N, t;
-    scanf("%d", &N);
+    scanf("%lld", &N);
     ll Nnum[N];
 
 
     for(int i = 0; i < N; i++)
-        scanf("%d", &Nnum[i]);
+        scanf("%lld", &Nnum[i]);
     
 
     shell_sort(Nnum, N);
 
-    while(scanf("%d", &t) != EOF)
-        busca(t, N, Nnum) == -1 ? printf("Nao\n") : printf("sim\n");
+    while(scanf("%lld", &t) != EOF)
+        busca(t, N, Nnum) == -1 ? printf("Nao\n") : printf("Sim\n");
     
     return 0;
 }
