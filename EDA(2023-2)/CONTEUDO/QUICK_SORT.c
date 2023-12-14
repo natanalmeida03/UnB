@@ -19,7 +19,7 @@ int partition(int *v, int l, int r) {
 }
 void quick_sort(int *v, int l, int r)
 {
-    if(r > l) return;
+    if(l >= r) return;
 
 
     int j = partition(v, l, r);
