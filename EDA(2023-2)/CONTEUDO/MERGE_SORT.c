@@ -32,9 +32,9 @@ void merge(int *v, int l, int m, int r)
 }
 void merge_sort(int *v, int l, int r)
 {
-    if(r > l) return;
+    if(l >= r) return;
 
-    int m = (r - l)/2;
+    int m = (r + l)/2;
 
     merge_sort(v, l, m);
     merge_sort(v, m+1, r);

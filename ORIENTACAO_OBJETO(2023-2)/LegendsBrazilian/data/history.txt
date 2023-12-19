@@ -1,0 +1,20 @@
+#PLAYER | RESULTADO | INIMIGO
+Saci | DERROTA | Cuca
+Saci | DERROTA | Cuca
+Cuca | VITORIA | Mula sem cabeca
+Mula sem cabeca | DERROTA | Cuca
+Cuca | VITORIA | Saci
+Cuca | VITORIA | Mula sem cabeca
+Saci | VITORIA | Mula sem cabeca
+Saci | VITORIA | Mula sem cabeca
+Cuca | DERROTA | Saci
+Cuca | VITORIA | Mula sem cabeca
+Saci | DERROTA | Cuca
+Cuca | DERROTA | Mula sem cabeca
+Cuca | DERROTA | Saci
+Mula sem cabeca | DERROTA | Saci
+Cuca | VITORIA | Mula sem cabeca
+Saci | VITORIA | Cuca
+Cuca | VITORIA | Saci
+Saci | DERROTA | Cuca
+Mula sem cabeca | DERROTA | Saci
