@@ -1,5 +1,5 @@
-# NATAN DA CRUZ ALMEIDA
-Engenharia de Software - UnB(2022 - ??)
+# NATAN DA CRUZ ALMEIDA - 222006169
+### Engenharia de Software - UnB(2022 - ??)
 
 + [DESENVOLVIMENTO DE SOFTWARE(2023/1)](https://github.com/cerejeiros/bloom)
 
@@ -10,3 +10,5 @@ Engenharia de Software - UnB(2022 - ??)
 + [ORIENTACAO A OBJETO(2023/2)](/ORIENTACAO_OBJETO(2023-2)/)
 
 + [TÓPICOS ESPECIAS EM PROGRAMACAO(2023/2)](/TEP(2023-2)/)
+
++ [MATEMÁTICA DISCRETA 2](/MD2(2024-1)/)
