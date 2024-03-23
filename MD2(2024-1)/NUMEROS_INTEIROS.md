@@ -73,7 +73,7 @@ Sejam *a, b* ∈ **N**, entao *a.b* ∈ **N** e *a + b* ∈ **N**
 
 ### **AXIOMA 8**:
 
-Sejam *a, b* ∈ **Z**, entao vale uma, somente uma, das afirmativas abaixo:
+Sejam *a, b* ∈ **Z**, entao vale uma, e **somente uma**, das afirmativas abaixo:
 1. a = b
 1. b - a ∈ **N**
 1. a - b ∈ **N**
