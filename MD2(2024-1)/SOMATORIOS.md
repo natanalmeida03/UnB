@@ -28,3 +28,11 @@ Seja *n, c* ∈ **Z** e ai e bi sequencias de inteiros, Entao:
 >    - (a + b) + c
 >    - a<sup>(b<sup>c</sup>)</sup> 
 
+#### SOMAS TELESCOPICAS
+
+Definição: seja {a<sub>i</sub>} é uma sequencia de inteiros .
+Entao a **Soma telescopica** para a sequencia de {a<sub>i</sub>} é dada por:
+
+**Σ**<sup>b</sup><sub>i=a</sub> a<sub>i+1</sub> - a<sub>i</sub>
+
+     
