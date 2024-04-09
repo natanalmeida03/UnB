@@ -71,7 +71,7 @@ Sejam *a, b, c* ∈ **Z**, entao:
 
 Sejam *a, b* ∈ **N**, entao *a.b* ∈ **N** e *a + b* ∈ **N** 
 
-### **AXIOMA 8**:
+### **AXIOMA 8**: (TRICOTOMIA)
 
 Sejam *a, b* ∈ **Z**, entao vale uma, e **somente uma**, das afirmativas abaixo:
 1. a = b
