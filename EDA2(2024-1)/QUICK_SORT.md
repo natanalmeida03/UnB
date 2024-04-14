@@ -17,19 +17,13 @@ Ideia do algoritmo da separacao.
 
 VERSAO COM: $$ O(n^{2}) $$
 ``` c
-void exch(int *a, int *b){
-     int t = *a;
-     *a = *b;
-     *b = t;
-}
-
 int partition(int *v, int l, int r){
-     pivo = v[r];
+     int p = v[r];
      int k = l, j = l;
 
-     while(k < d){
-          if(v[j] <= c)
-               exch(&v[k], v[j++]);
+     while(k < r){
+          if(v[k] <= p)
+               exch(&v[k], &v[j++]);
           k++;
      }
 
@@ -54,5 +48,30 @@ Método da mediana de tres. $$ O(n.lg(n)) $$
 Mediana entre : v[l], v[(r+l)/2] e v[d].   
 e coloca na posicao r
 
+```
+int partition(int *v, int l, int r){
 
+     int m = (l + r) / 2;
 
+     if (v[m] < v[l]) 
+          exch(&v[m], &v[l]);
+     if (v[r] < v[l])
+          exch(&v[r], &v[l]);
+     if (v[r] < v[m])
+          exch(&v[r], &v[m]);
+
+     exch(&v[m], &v[r]);
+
+     int p = v[r];
+     int k = l, j = l;
+
+     while(k < r){
+          if(v[k] <= p)
+               exch(&v[k], &v[j++]);
+          k++;
+     }
+
+     exch(&v[j], &v[r]);
+     return j;
+} 
+```
