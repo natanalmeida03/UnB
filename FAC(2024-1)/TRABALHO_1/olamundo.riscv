@@ -1,0 +1,12 @@
+.data
+     message: .asciz "Ola Mundo\n"
+
+.text
+main:
+     la a0, message
+     li a7, 4
+     ecall
+
+     li a7, 93
+     li a0, 0
+     ecall
