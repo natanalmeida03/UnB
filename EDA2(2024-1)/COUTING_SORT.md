@@ -22,7 +22,7 @@ void ordenaContagem(int *v, int n, int a, int b){
 
      for(int i = 0, j = 0; i < b-a+1; i++){
           while(aux[i] > 0){
-               v[j++] = i;
+               v[j++] = i+a;
                aux[i]--;
           }
      }
