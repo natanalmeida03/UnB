@@ -1,0 +1,55 @@
+.data
+	n: .word 0
+	x: .word 0
+	r: .word 0
+	bn: .asciz "\n"
+	
+.text
+main:
+	#n
+	la a0, n
+	li a7, 5
+	ecall
+	
+	addi t1, a0, 0
+	
+	li t0, 0
+	li t2, -2147483648
+	
+	while:
+		bge t0,t1,endwhile
+		
+		la a0, x
+		li a7, 5
+		ecall
+		
+		addi t3, a0, 0
+		
+		bge t3, t2, emaior
+		
+		j fimemaior
+		emaior:
+			addi t2, t3, 0
+			j fimemaior
+		fimemaior:
+		
+			addi t0, t0, 1
+			j while
+	endwhile:
+	
+	la a0, r
+    	sw t2, 0(a0)
+    	
+	li a7, 1
+	la a0, r
+	lw a0, 0(a0)
+	ecall
+	
+	la a0, bn
+	li a7, 4
+	ecall
+	
+	li a7, 93
+	li a0, 0
+	ecall
+	

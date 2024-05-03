@@ -1,0 +1,152 @@
+.data
+	a: .word 0
+	b: .word 0
+	c: .word 0
+	ad: .asciz "ADD: "
+	sb: .asciz  "SUB: "
+	adn: .asciz "AND: "
+	orn: .asciz  "OR: "
+	orx: .asciz "XOR: "
+	m: .asciz  "MASK: "
+	shl: .asciz "SLL("
+	shr: .asciz  "SRL("
+	par: .asciz "): "
+	bn: .asciz "\n"
+
+.text
+main:
+	la a0, a
+	li a7, 5
+	ecall
+	
+	addi t0, a0, 0
+	
+
+	la a0, b
+	li a7, 5
+	ecall
+	
+	addi t1, a0, 0
+	
+	
+	la a0, c
+	li a7, 5
+	ecall
+	
+	addi t2, a0, 0
+	
+	la a0,ad
+	li a7, 4
+	ecall
+	
+	li a7,1
+	add a0, t0, t1
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0,sb
+	li a7, 4
+	ecall
+	
+	li a7,1
+	sub a0, t0,  t1
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0,adn
+	li a7, 4
+	ecall
+	
+	li a7,1
+	and a0, t0,  t1
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0,orn
+	li a7, 4
+	ecall
+	
+	li a7,1
+	or a0, t0,  t1
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0,orx
+	li a7, 4
+	ecall
+	
+	li a7,1
+	xor a0, t0,  t1
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0, m
+	li a7, 4
+	ecall
+	
+	li a7,1
+	andi a0, t2,  31
+	addi t2, a0, 0
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0,shl
+	li a7, 4
+	ecall
+
+	li a7,1
+	addi a0, t2, 0
+	ecall
+	
+	li a7,4
+	la a0, par
+	ecall
+	
+	li a7,1
+	sll a0, t0,  t2
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	la a0,shr
+	li a7, 4
+	ecall
+	
+	li a7,1
+	addi a0, t2, 0
+	ecall
+	
+	li a7,4
+	la a0, par
+	ecall
+	
+	li a7,1
+	srl a0, t1,  t2
+	ecall
+	
+	li a7,4
+	la a0, bn
+	ecall
+	
+	li a7, 93
+	ecall
