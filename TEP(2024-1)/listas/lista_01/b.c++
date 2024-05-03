@@ -16,14 +16,10 @@ int main(){
           int v = 0;
 
           for(auto &c : s){
-               if(c == 'U')
-                    y++;
-               else if(c == 'D')
-                    y--;
-               else if(c == 'L')
-                    x--;
-               else if(c == 'R')
-                    x++;
+               if(c == 'U') y++;
+               else if(c == 'D') y--;
+               else if(c == 'L') x--;
+               else if(c == 'R') x++;
 
                if(x == 1 and y == 1){
                     v = 1;
