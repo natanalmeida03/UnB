@@ -1,0 +1,63 @@
+.data
+	a: .word 0
+	c: .word 0
+	invalido: .asciz "Entrada invalida.\n"
+	bn: .asciz "\n"
+	
+.text
+main:
+	la a0, a
+	li a7, 5
+	ecall
+	mv t0, a0
+	
+	la a0, c
+	li a7, 5
+	ecall
+	mv t1, a0
+	
+	li t2, 1
+	ble t0, t2, invalidNumb
+	ble t1, t2, invalidNumb
+	
+	mv t2, t0
+	mv t3, t1
+
+	mdc:
+		beq t3, zero, mmc
+		remu t4, t2, t3
+		mv t2, t3
+		mv t3, t4
+		j mdc
+	mmc:
+		mul t3, t0, t1
+		div t3, t3, t2
+		
+	print:	
+		mv a0, t2
+		li a7, 1
+		ecall
+		
+		la a0, bn
+		li a7, 4
+		ecall
+		
+		mv a0, t3
+		li a7, 1
+		ecall
+		
+		la a0, bn
+		li a7, 4
+		ecall
+		
+	j end
+	
+	invalidNumb:
+		la a0, invalido
+		li a7, 4
+		ecall
+		j end
+		
+	end:
+		li a7, 10
+		ecall

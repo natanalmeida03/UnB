@@ -1,0 +1,68 @@
+.data 
+	n: .word 0
+	invalid: .asciz "Entrada invalida.\n"
+	sim: .asciz "sim\n"
+	nao: .asciz "nao\n"
+	
+.text
+main:
+	la a0, n
+	li a7, 5
+	ecall
+	mv t0, a0
+	
+	li t1, 1
+	li t4, 0
+	ver:
+		blt t0, t1, invalidNumb
+		beq t0, t1, notPrime
+		
+		li t2, 2
+		li t3,3
+		
+		beq t0, t2, prime
+		beq t0, t3, prime
+		
+		rem t1, t0, t2
+		beq t1, t4, notPrime
+		
+		rem t1, t0, t3
+		beq t1, t4, notPrime
+		
+		li t2, 5
+		beq t0, t2, prime
+		li t3, 2
+		li t5, 6
+		for:
+			rem t1, t0, t2
+			beq t1, t4, notPrime
+			
+			add t2, t2, t3
+			sub t3, t5, t3
+			
+			blt t2, t0, for
+			
+		j prime
+	
+	invalidNumb:
+		la a0, invalid
+		li a7, 4
+		ecall
+		j end
+		
+	notPrime:
+		la a0, nao
+		li a7, 4
+		ecall
+		j end
+		
+	prime:
+		la a0, sim
+		li a7, 4
+		ecall
+		
+		j end
+		
+	end:
+		li a7, 10
+		ecall
